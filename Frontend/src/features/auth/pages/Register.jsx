@@ -1,10 +1,40 @@
 import React from 'react'
+import {useNavigate , Link} from "react-router"
+
 
 const Register = () => {
+
+  const navigate = useNavigate();
+  const handlesubmit =()=>{
+    e.preventDefault();
+  }
   return (
-    <div>
-      Register
-    </div>
+    <main>
+        <div className="form-container">
+            <h1>Register</h1>
+
+            <form onSubmit={handlesubmit}>
+              <div className='input-group'>
+                    <label htmlFor="username">Username</label>
+                    <input type="text" id='Username' name='Username' placeholder='enter Username' />
+                </div>
+                <div className='input-group'>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" id='email' name='email' placeholder='enter email address' />
+                </div>
+                 <div className='input-group'>
+                    <label htmlFor="password">password</label>
+                    <input type="password" id='password' name='password' placeholder='enter your Password' />
+                </div>
+                <button className='button primary-button'>Register</button>
+
+
+            </form>
+
+            <p>Already have an account ? <Link to={"/login"}>Login</Link></p>
+
+        </div>
+    </main>
   )
 }
 

@@ -14,10 +14,18 @@ main .form-container {
 main .form-container h1 {
   color: whitesmoke;
 }
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 main .input-group {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+main .input-group label {
+  align-self: flex-start;
 }
 main .input-group input {
   border: none;
@@ -25,4 +33,8 @@ main .input-group input {
   padding-inline: 1rem;
   padding-block: 0.75rem;
   border-radius: 0.75rem;
+}
+main a {
+  color: rgb(230, 163, 174);
+  text-decoration: none;
 }/*# sourceMappingURL=auth.form.css.map */

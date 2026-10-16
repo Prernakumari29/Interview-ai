@@ -14,11 +14,21 @@ main{
             color: whitesmoke;
         }
     }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
 
     .input-group{
         display: flex;
         flex-direction: column;
+        // align-items: flex-start;
         gap: 0.75rem;
+
+         label {
+        align-self: flex-start;
+    }
 
         input{
             border: none;
@@ -30,5 +40,10 @@ main{
         }
 
         
+    }
+
+    a{
+        color: rgb(230, 163, 174);
+        text-decoration: none;
     }
 }

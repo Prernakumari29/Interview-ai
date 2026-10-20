@@ -53,11 +53,11 @@ export const logout = async()=>{
 export const getMe = async()=>{
 
     try {
-        const response = await api.get("/api/auth/get-me")
-        return response.data
-
+        const response = await api.get("/api/auth/get-me");
+        return response.data;
     } catch (error) {
-        console.log(error)
+        console.log("getMe error:", error.response?.data || error.message);
+        throw error;
     }
 
 }

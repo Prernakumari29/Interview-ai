@@ -2,10 +2,11 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = require("./src/app");
 const connected = require("./src/config/db");
-const invokeGeminiAi = require("./src/services/ai.service")
+const {resume , selfDescription , jobDescription} = require("./src/services/temp");
+const generateInterviewReport = require("./src/services/ai.service");
 
 connected();
-invokeGeminiAi()
+generateInterviewReport({resume , selfDescription , jobDescription})
 
 
 const port = process.env.PORT || 8000
